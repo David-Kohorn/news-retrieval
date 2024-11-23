@@ -5,8 +5,10 @@ function App() {
   const [data, setData] = useState([{}])
 
   useEffect (() => {
-    fetch("./all-news").then(
-      res => res.json()
+    fetch("http://127.0.0.1:5000/all-news").then(
+      (res) => {
+        return res.json();
+      }
     ).then(
       data => {
         setData(data)
